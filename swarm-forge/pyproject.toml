@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "swarm-forge"
+version = "0.1.0"
+description = "An AI-powered software development lifecycle automation tool"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "swarm_forge"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = "^0.9.0"
+rich = "^13.6.0"
+pydantic = "^2.4.2"
+openai = "^1.3.0"
+swarm = {git = "https://github.com/openai/swarm.git"}
+jinja2 = "^3.1.2"
+
+[tool.poetry.scripts]
+forge = "swarm_forge.cli.main:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
